@@ -1,0 +1,170 @@
+{
+    "name": "mangaonlineviewer",
+    "description": "Userscript that helps to read Manga faster by loading all the pages at once",
+    "version": "30.0.0",
+    "scripts": {
+        "start": "vite",
+        "build": "gulp dev",
+        "release": "gulp release"
+    },
+    "author": "TagoDR",
+    "license": "MIT",
+    "type": "module",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TagoDR/MangaOnlineViewer.git"
+    },
+    "keywords": [
+        "manga",
+        "reader",
+        "viewer",
+        "online",
+        "loader"
+    ],
+    "bugs": "https://github.com/TagoDR/MangaOnlineViewer/issues",
+    "homepage": "https://github.com/TagoDR/MangaOnlineViewer#readme",
+    "devDependencies": {
+        "@fal-works/esbuild-plugin-global-externals": "^2.1.2",
+        "@rbnlffl/rollup-plugin-eslint": "^4.0.0",
+        "@rollup/plugin-commonjs": "^22.0.2",
+        "@rollup/plugin-node-resolve": "^14.1.0",
+        "@rollup/plugin-typescript": "^8.5.0",
+        "@types/file-saver": "^2.0.5",
+        "@types/imagesloaded": "^4.1.2",
+        "@types/lodash": "^4.14.186",
+        "@types/node": "^18.7.23",
+        "@types/nprogress": "^0.2.0",
+        "@types/tampermonkey": "^4.0.5",
+        "@types/tinycolor2": "^1.4.3",
+        "@typescript-eslint/eslint-plugin": "^5.38.1",
+        "@typescript-eslint/parser": "^5.38.1",
+        "del": "^7.0.0",
+        "esbuild": "^0.15.10",
+        "esbuild-minify-templates": "^0.9.2",
+        "eslint": "^8.24.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-airbnb-typescript": "^17.0.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-import-resolver-typescript": "^3.5.1",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "gulp": "^4.0.2",
+        "gulp-preprocess": "^4.0.2",
+        "prettier": "^2.7.1",
+        "rollup": "^2.79.1",
+        "rollup-plugin-bundle-size": "^1.0.3",
+        "rollup-plugin-cleanup": "^3.2.1",
+        "rollup-plugin-external-globals": "^0.6.1",
+        "ts-import": "^4.0.0-beta.2",
+        "tslib": "^2.4.0",
+        "typescript": "^4.8.4",
+        "userscript-meta": "^1.0.1",
+        "vite": "^3.1.4"
+    },
+    "dependencies": {
+        "file-saver": "^2.0.5",
+        "imagesloaded": "^5.0.0",
+        "jszip": "=3.9.1",
+        "lodash": "^4.17.21",
+        "nprogress": "^0.2.0",
+        "sweetalert2": "^11.4.35",
+        "tinycolor2": "^1.4.2"
+    },
+    "browserslist": {
+        "production": [
+            ">20.0%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "prettier": {
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "printWidth": 100
+    },
+    "eslintConfig": {
+        "parser": "@typescript-eslint/parser",
+        "parserOptions": {
+            "ecmaVersion": 2020,
+            "project": [
+                "./tsconfig.json"
+            ]
+        },
+        "env": {
+            "browser": true,
+            "es6": true,
+            "greasemonkey": true
+        },
+        "extends": [
+            "airbnb-base",
+            "airbnb-typescript/base",
+            "prettier"
+        ],
+        "plugins": [
+            "import",
+            "prettier",
+            "@typescript-eslint"
+        ],
+        "settings": {
+            "import/resolver": {
+                "node": {
+                    "extensions": [
+                        ".js",
+                        ".ts",
+                        ".jsx",
+                        ".tsx",
+                        ".json"
+                    ]
+                }
+            },
+            "import/extensions": [
+                ".js",
+                ".ts",
+                ".mjs",
+                ".jsx",
+                ".tsx"
+            ]
+        },
+        "rules": {
+            "prettier/prettier": [
+                "warn"
+            ],
+            "no-console": "warn",
+            "import/extensions": [
+                "error",
+                "always",
+                {
+                    "pattern": {
+                        "jsx": "never",
+                        "tsx": "never",
+                        "ts": "never",
+                        "js": "never"
+                    }
+                }
+            ],
+            "no-param-reassign": [
+                "error",
+                {
+                    "props": false
+                }
+            ]
+        }
+    },
+    "eslintIgnore": [
+        "node_modules",
+        "*.min.js",
+        "dist/**",
+        "gulpfile*.js",
+        "Manga_OnlineViewer.meta.js",
+        "Manga_OnlineViewer.user.js",
+        "Manga_OnlineViewer_Adult.meta.js",
+        "Manga_OnlineViewer_Adult.user.js"
+    ]
+}
